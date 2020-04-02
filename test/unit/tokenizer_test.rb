@@ -6,7 +6,7 @@ class TokenizerTest < Minitest::Test
     result = HashtagParser::Tokenizer.tokenize("#tis a #tag")
     assert_equal(
       [
-        {type: :sos, index: nil, char: nil},
+        {type: :sos, index: -1, char: nil},
         {type: :hashtag, index: 0, char: nil},
         {type: :char, index: 1, char: 't'},
         {type: :char, index: 2, char: 'i'},
@@ -28,7 +28,7 @@ class TokenizerTest < Minitest::Test
     result = HashtagParser::Tokenizer.tokenize("🥑")
     assert_equal(
       [
-        {type: :sos, index: nil, char: nil},
+        {type: :sos, index: -1, char: nil},
         {type: :char, index: 0, char: '🥑'},
         {type: :eos, index: 1, char: nil}
       ],

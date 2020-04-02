@@ -5,7 +5,22 @@ class HashtagParserTest < Minitest::Test
     refute_nil ::HashtagParser::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_it_parses_hashtags_from_text
+    hashtags = HashtagParser::Parser.parse("#ruby is #awesome")
+    assert_equal(
+      [
+        {
+          text: "ruby",
+          start: 0,
+          end: 4
+        },
+        {
+          text: "awesome",
+          start: 9,
+          end: 16
+        }
+      ],
+      hashtags
+    )
   end
 end

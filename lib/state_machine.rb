@@ -29,6 +29,10 @@ module HashtagParser
       @start_index = index
     end
 
+    def hashtag_incoming
+      @parsing_hashtag = true
+    end
+
     def hashtag_finishes_at(index)
       if consumed_anything
         hashtags.push(
