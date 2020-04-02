@@ -1,5 +1,7 @@
 # HashtagParser
 
+[![Build Status](https://travis-ci.org/zucaritask/hashtag_parser.svg?branch=master)](https://travis-ci.org/zucaritask/hashtag_parser)
+
 A hashtag parser that brings the behavior of `hashtag-rs` to ruby.
 
 ## Installation
