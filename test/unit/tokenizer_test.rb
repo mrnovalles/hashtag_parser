@@ -23,4 +23,16 @@ class TokenizerTest < Minitest::Test
       result.map(&:as_json)
     )
   end
+
+  def test_tokenizer_returns_a_list_of_tokens_for_emoji
+    result = HashtagParser::Tokenizer.tokenize("🥑")
+    assert_equal(
+      [
+        {type: :sos, index: nil, char: nil},
+        {type: :char, index: 0, char: '🥑'},
+        {type: :eos, index: 1, char: nil}
+      ],
+      result.map(&:as_json)
+    )
+  end
 end

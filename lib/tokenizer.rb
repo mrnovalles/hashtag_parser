@@ -10,6 +10,9 @@ module HashtagParser
   end
 
   class Token
+    # https://rubular.com/r/8sOK5MJz9W60N6
+    @@end_of_hashtag_regex = /[\\&%#\s\n\t!@$^&*()\r.,-<>\/|\[\]{}`~=+;?£•´:]/
+
     attr_reader :char, :index, :type
 
     def initialize(char, index)
@@ -22,6 +25,17 @@ module HashtagParser
       else
         @type = :char
         @char = char
+      end
+    end
+
+    def end_of_hashtag?
+      case type
+      when :char
+        @@end_of_hashtag_regex.match?(char)
+      when :hashtag, :sos
+        false
+      else
+        true
       end
     end
 
