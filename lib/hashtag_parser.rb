@@ -40,7 +40,6 @@ module HashtagParser
           state_machine.hashtag_finishes_at(index - 1) if state_machine.parsing_hashtag?
           state_machine.hashtag_incoming if next_token.hashtag?
         when :eos
-          byebug
           if state_machine.parsing_hashtag?
             state_machine.hashtag_finishes_at(index - 1)
           end
