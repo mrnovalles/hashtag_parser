@@ -4,6 +4,8 @@
 
 A hashtag parser that brings the behavior of `hashtag-rs` to ruby.
 
+This project is a direct port of the above mentioned using ruby.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,23 +24,39 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+hashtags = HashtagParser.pase("#ruby is #awesome")
+```
 
-## Development
+`hashtags` is going to be:
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+```
+[
+  {
+    text: "ruby",
+    start: 0,
+    end: 4
+  },
+  {
+    text: "awesome",
+    start: 9,
+    end: 16
+  }
+]
+```
+## Contact 
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Twitter: [@zucaritask](http://twitter.com/zucaritask)
+Github: [@zucaritask](http://github.com/zucaritask)
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hashtag_parser. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/hashtag_parser/blob/master/CODE_OF_CONDUCT.md).
-
+1. Fork it
+1. Create your feature branch (git checkout -b my-new-feature)
+1. Commit your changes (git commit -am 'Add some feature')
+1. Push to the branch (git push origin my-new-feature)
+1. Create new Pull Request
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the HashtagParser project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/hashtag_parser/blob/master/CODE_OF_CONDUCT.md).
