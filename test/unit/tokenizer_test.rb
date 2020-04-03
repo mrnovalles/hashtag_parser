@@ -3,7 +3,7 @@ require "test_helper"
 class TokenizerTest < Minitest::Test
 
   def test_tokenizer_returns_a_list_of_tokens
-    result = HashtagParser::Tokenizer.tokenize("#tis a #tag")
+    result = Tokenizer.tokenize("#tis a #tag")
     assert_equal(
       [
         {type: :sos, index: -1, char: nil},
@@ -25,7 +25,7 @@ class TokenizerTest < Minitest::Test
   end
 
   def test_tokenizer_returns_a_list_of_tokens_for_emoji
-    result = HashtagParser::Tokenizer.tokenize("🥑")
+    result = Tokenizer.tokenize("🥑")
     assert_equal(
       [
         {type: :sos, index: -1, char: nil},

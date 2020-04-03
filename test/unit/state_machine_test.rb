@@ -5,7 +5,7 @@ class StateMachineTest < Minitest::Test
   attr_accessor :state_machine
 
   def setup
-    @state_machine = HashtagParser::StateMachine.new
+    @state_machine = StateMachine.new
   end
 
   def test_that_it_initializes_with_sane_values

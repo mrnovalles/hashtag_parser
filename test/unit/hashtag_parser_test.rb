@@ -6,7 +6,7 @@ class HashtagParserTest < Minitest::Test
   end
 
   def test_it_parses_hashtags_from_text
-    hashtags = HashtagParser::Parser.parse("#ruby is #awesome")
+    hashtags = HashtagParser.parse("#ruby is #awesome")
     assert_equal(
       [
         {

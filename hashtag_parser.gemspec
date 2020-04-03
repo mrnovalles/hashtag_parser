@@ -1,4 +1,4 @@
-require_relative 'lib/hashtag_parser/version'
+require_relative 'lib/hashtag_parser.rb'
 
 Gem::Specification.new do |spec|
   spec.name          = "hashtag_parser"
