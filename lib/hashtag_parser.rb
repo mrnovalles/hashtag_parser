@@ -4,7 +4,7 @@ require_relative "./token"
 
 class HashtagParser
 
-  VERSION = "0.0.1"
+  VERSION = "0.1.0"
 
   def self.parse(text)
     tokens = Tokenizer.tokenize(text)
