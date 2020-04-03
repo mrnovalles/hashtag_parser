@@ -7,7 +7,9 @@ Gem::Specification.new do |spec|
   spec.email         = ["zucaritas@gmail.com"]
 
   spec.summary       = "Hashtag parser returning start, end and text of each hashtag"
-  spec.description   = "Hashtag parser inspired by https://github.com/tonsser/hashtag-rs/"
+  spec.description   = "Hashtag parser inspired by https://github.com/tonsser/hashtag-rs/\n"\
+    "Given a string, this gem returns an array with an object with `text`, `start` and `end`.\n"\
+    "Its goal is to match Instagram's parsing of hashtags."
   spec.homepage      = "https://github.com/zucaritask/hashtag_parser"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")

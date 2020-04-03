@@ -6,9 +6,9 @@
         ]
     },
     {
-        "text": "#rust is awesome",
+        "text": "#ruby is awesome",
         "hashtags": [
-            { "text": "rust", "start": 0, "end": 4 }
+            { "text": "ruby", "start": 0, "end": 4 }
         ]
     },
     {

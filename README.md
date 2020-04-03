@@ -5,8 +5,10 @@
 A hashtag parser that brings the behavior of [hashtag-rs](https://github.com/tonsser/hashtag-rs)
 to ruby and the work of using an Finite State Machine to do the parsing by [davidpdrsn](https://github.com/davidpdrsn)
 
-Given a string, this gem returns an array with an object with `text`, `start` and `end`
-for each ocurrence of a hashtag in the text.
+Given a string as `"#ruby is #awesome"`, this gem returns an array with an object with `text`, `start` and `end`
+for each of the two hashtags in the string.
+
+Its goal is to match Instagram's parsing of hashtags.
 
 ## Installation
 
