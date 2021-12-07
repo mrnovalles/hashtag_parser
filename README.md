@@ -50,9 +50,9 @@ hashtags = HashtagParser.parse("#ruby is #awesome")
 ```
 ## Contact 
 
-Twitter: [@zucaritask](http://twitter.com/zucaritask)
+Twitter: [@mrnovalles](http://twitter.com/mrnovalles)
 
-Github: [@zucaritask](http://github.com/zucaritask)
+Github: [@mrnovalles](http://github.com/mrnovalles)
 
 ## Contributing
 
